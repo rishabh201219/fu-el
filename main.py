@@ -5,11 +5,10 @@ from model_files.ml_model import predict_mpg
 app = Flask(__name__)
 
 
-#with open('model.bin', 'rb') as f_in:
-   # model = pickle.load(f_in)
-   # f_in.close()
+
 
 model = pickle.load(open('model.bin', 'rb')) 
+
 @app.route("/")
 def home():
     return render_template('home.html')
