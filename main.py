@@ -9,7 +9,7 @@ app = Flask(__name__)
    # model = pickle.load(f_in)
    # f_in.close()
 
-model = pickle.load(open('model.pkl', 'rb')) 
+model = pickle.load(open('model.bin', 'rb')) 
 @app.route("/")
 def home():
     return render_template('home.html')
